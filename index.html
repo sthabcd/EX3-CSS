@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shinchan Homepage</title>
     <style>
-        /* Part 1知识点 */
+       
         body {
             background-color: #edeff2;
-            font-family: 'Arial', Helvetica, sans-serif; /* Part 2字体备用 */
+            font-family: 'Arial', Helvetica, sans-serif; 
             margin: 0;
         }
 
-        /* 导航栏固定定位（Part 2 Page 19） */
+       
         .nav {
             position: sticky;
             top: 0;
@@ -23,42 +23,42 @@
 
         .nav a {
             color: white;
-            text-decoration: none; /* Part 1 Page 20 */
+            text-decoration: none; 
             margin: 0 20px;
         }
 
-        /* 盒模型优化（Part 2 Page 21-22） */
+       
         .character-block {
             display: inline-block;
             width: 30%;
             text-align: center;
-            margin: 10px 0 10px 0; /* 上下10px 左右0 */
+            margin: 10px 0 10px 0; 
             padding: 10px;
             background-color: white;
-            border: 1px solid #ccc; /* Part 1盒模型 */
+            border: 1px solid #ccc; 
         }
 
-        /* 块级元素居中（Part 2 Page 13） */
+      
         #Shinchan {
             margin: 0 auto;
             width: 80%;
         }
 
-        /* 字体增强（Part 2 Page 23） */
+       
         h1, h2 {
             font-weight: bold;
             font-size: 1.5em;
         }
 
-        /* 表单元素样式 */
+       
         select, input[type="text"], textarea {
             width: 300px;
-            padding: 5px 10px; /* 上下5px 左右10px */
+            padding: 5px 10px; 
             margin: 5px 0;
-            display: block; /* 块级元素换行（Part 2 Page 9） */
+            display: block;
         }
 
-        /* 按钮定位（Part 2 Page 15） */
+       
         button {
             position: relative;
             left: 50%;
@@ -70,27 +70,27 @@
             margin: 20px 0;
         }
 
-        /* 响应式图片（Part 2 Page 12） */
+        
         img[alt="banner"] {
             width: 100%;
-            display: block; /* 避免inline默认间隙 */
+            display: block; 
         }
     </style>
 </head>
 <body>
    
 
-    <header> <!-- 语义化区块（Part 2 Page 7） -->
+    <header> 
       <p style="text-align: center;">2025/4/8  22.20    Shinchan - Homepage</p>
         <img src="shin-chan-banner.jpg"width=1000/>
         <img src="naughtiest-son.jpg"width=420/>
     </header>
- <nav class="nav"> <!-- 使用语义化标签（Part 2 Page 7） -->
+ <nav class="nav"> 
        <a href="#Shinchan">Shinchan: Shiro and the Coal Town Game</a>
           <a href="#characters">Characters</a>
           <a href="#favorite">Who's your favorite?</a>
     </nav>
-    <section id="Shinchan"> <!-- 使用section替代div（Part 2 Page 7） -->
+    <section id="Shinchan">
         <h1 style="text-align: center;">Shinchan: Shiro and the Coal Town</h1>
         <h2 style="text-align: center;">(Available on: Nintendo Switch and Windows PC)</h2>
         <video controls>
