@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinchan Homepage</title>
+    <style>
+        /* Part 1知识点 */
+        body {
+            background-color: #edeff2;
+            font-family: 'Arial', Helvetica, sans-serif; /* Part 2字体备用 */
+            margin: 0;
+        }
+
+        /* 导航栏固定定位（Part 2 Page 19） */
+        .nav {
+            position: sticky;
+            top: 0;
+            background-color: #003366;
+            padding: 15px;
+            z-index: 999;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none; /* Part 1 Page 20 */
+            margin: 0 20px;
+        }
+
+        /* 盒模型优化（Part 2 Page 21-22） */
+        .character-block {
+            display: inline-block;
+            width: 30%;
+            text-align: center;
+            margin: 10px 0 10px 0; /* 上下10px 左右0 */
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ccc; /* Part 1盒模型 */
+        }
+
+        /* 块级元素居中（Part 2 Page 13） */
+        #Shinchan {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        /* 字体增强（Part 2 Page 23） */
+        h1, h2 {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* 表单元素样式 */
+        select, input[type="text"], textarea {
+            width: 300px;
+            padding: 5px 10px; /* 上下5px 左右10px */
+            margin: 5px 0;
+            display: block; /* 块级元素换行（Part 2 Page 9） */
+        }
+
+        /* 按钮定位（Part 2 Page 15） */
+        button {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin: 20px 0;
+        }
+
+        /* 响应式图片（Part 2 Page 12） */
+        img[alt="banner"] {
+            width: 100%;
+            display: block; /* 避免inline默认间隙 */
+        }
+    </style>
+</head>
+<body>
+   
+
+    <header> <!-- 语义化区块（Part 2 Page 7） -->
+      <p style="text-align: center;">2025/4/8  22.20    Shinchan - Homepage</p>
+        <img src="shin-chan-banner.jpg"width=1000/>
+        <img src="naughtiest-son.jpg"width=420/>
+    </header>
+ <nav class="nav"> <!-- 使用语义化标签（Part 2 Page 7） -->
+       <a href="#Shinchan">Shinchan: Shiro and the Coal Town Game</a>
+          <a href="#characters">Characters</a>
+          <a href="#favorite">Who's your favorite?</a>
+    </nav>
+    <section id="Shinchan"> <!-- 使用section替代div（Part 2 Page 7） -->
+        <h1 style="text-align: center;">Shinchan: Shiro and the Coal Town</h1>
+        <h2 style="text-align: center;">(Available on: Nintendo Switch and Windows PC)</h2>
+        <video controls>
+            <source src="shinchan-and-the-coal-town.mp4" type="video/mp4">
+        </video>
+    </section>
+    <aection id="characters">
+        <h1 style="text-align: center;">The Characters</h1>
+        <div>
+            <div class="character-block">
+                <p>Shinnosuke Nohara (Shinchan)</p>
+                <img src="character-shinchan.png" alt="shinchan" width="160">
+                <p>The mischievous 5-year-old protagonist...</p>
+            </div>
+            <div class="character-block">
+                <p>Misae Nohara (Mom)</p>
+                <img src="character-misae.webp" alt="misae" width="160">
+                <p>Shinchan's short-tempered but loving mother...</p>
+            </div>
+            <div class="character-block">
+                <p>Hiroshi Nohara (Dad)</p>
+                <img src="character-hiroshi.webp" alt="hiroshi" width="160">
+                <p>The laid-back father who works at a company...</p>
+            </div>
+        </div>
+        <div>
+            <div class="character-block">
+                <p>Himawari (Sister)</p>
+                <img src="character-himawari.png" alt="himawari" width="160">
+                <p>The youngest of the Noharas...</p>
+            </div>
+            <div class="character-block">
+                <p>Yukino Nohara (Shiro)</p>
+                <img src="character-shiro.png" alt="shiro" width="160">
+                <p>The family dog — small, fluffy...</p>
+            </div>
+            <div class="character-block">
+                <p>Toru Kazama</p>
+                <img src="character-toru-kazama.webp" alt="kazama" width="160">
+                <p>The smart and responsible friend of Shinchan...</p>
+            </div>
+        </div>
+      </section>
+
+    <section id="favorite">
+        <h1>Who's your favorite?</h1>
+        <select>
+            <option value="Shinchan">Shinchan</option>
+            <option value="Mom">Mom</option>
+            <option value="Dad">Dad</option>
+            <option value="Sister">Sister</option>
+            <option value="Shiro">Shiro</option>
+            <option value="Toru Kazama">Toru Kazama</option>
+        </select>
+    </section>
+
+    <h3 class="center-text">Character not in the list? Write their name below:</h3>
+    <label for="favouriteCharacter">Your other favourite character:</label><br>
+    <input type="text" id="favouriteCharacter" name="favouriteCharacter" placeholder="Enter character name">
+
+    <br><br>
+    <label for="reasons">Why do you like this character?</label><br><br>
+    <textarea id="reasons" name="reasons" placeholder="State your reasons..." rows="4" cols="50"></textarea>
+
+    <h1 class="center-text">Tell us a bit more about yourself</h1>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+    <label>Your Gender:</label>
+    <label><input type="radio" name="gender" value="male"> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label><br><br>
+
+    <label for="Date">Date of Birth:</label>
+    <input type="text" id="Date" name="Date" placeholder="dd.mm.yyyy"><br><br>
+
+    <label for="email">Your Email:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your email"><br>
+
+    <button type="submit">Submit</button>
+
+    <h1 class="center-text">Get in touch with us:</h1>
+    <a href="mailto:1241425361@qq.com">1241425361@qq.com</a>
+</body>
+</html>
